@@ -14,14 +14,14 @@ In this application I used :
 How to change database and run program? 
 1. **Choose Database. Change application.properties file.** 
 Setting for different databases you can find in folder src/main/resources/DBconfig. In This folder you can find settings for H2, MongoDB and RemoteMySQL Database. Just simple copy+paste in application.properties file.
-1. After when you choose database next step is to **move Annotations @AspectServiceAnnotation and @EventListener(ApplicationReadyEvent.class) for specific method in Start.java.** 
+1. After when you choose database next step is to **move Annotations @EventListener(ApplicationReadyEvent.class) for specific method in Start.java.** 
 Use following table
 
-Your Database | init Method
---------- | ---------------
-H2 | initForSql() // default
-MongoDB | initForNoSql()
-RemoteMySQL | initForRemoteMySql()
+Your Database | save method() | load method()
+--------- | --------------- | -----------
+H2 | saveInH2() // default | readFromH2()
+MongoDB | saveInMongo() | readFromMongo()
+RemoteMySQL | saveInRemoteMySql() | readFromRemoteMySQL()
 
 
 Things to do:
