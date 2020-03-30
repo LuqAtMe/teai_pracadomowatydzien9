@@ -49,7 +49,6 @@ public class Start {
         System.out.println("Records saved");
     }
 
-
     @AspectServiceSave
     public void saveInRemoteMySql() throws IOException {
 
@@ -75,7 +74,6 @@ public class Start {
         List<ModelNoSql> all = modelRepoNoSql.findAll();
         System.out.println("Records loaded: " + all.size());
     }
-
 
     @AspectServiceLoad
     public void readFromRemoteMySQL() {
