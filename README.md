@@ -11,5 +11,5 @@ In this application I used :
 * MongoDB Database
 * RemoteMySQL Database
 
-Things to do
-[ ] asdasd
+Things to do:
+- [ ] Connect to all databases in single program run and load 1000 records and display results
