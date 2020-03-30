@@ -34,6 +34,7 @@ public class ModelSql {
     public ModelSql() {
     }
 
+
     public Long getId() {
         return id;
     }

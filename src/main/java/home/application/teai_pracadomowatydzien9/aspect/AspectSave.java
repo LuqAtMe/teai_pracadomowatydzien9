@@ -7,18 +7,18 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class AspectService {
+public class AspectSave {
 
     private long time;
 
-    @Before("@annotation(home.application.teai_pracadomowatydzien9.aspect.AspectServiceAnnotation)")
+    @Before("@annotation(AspectServiceSave)")
     public void counterStart(){
         time = System.currentTimeMillis();
     }
 
-    @After("@annotation(home.application.teai_pracadomowatydzien9.aspect.AspectServiceAnnotation)")
+    @After("@annotation(AspectServiceSave)")
     public void counterEnd(){
-        System.out.println(System.currentTimeMillis() - time);
+        System.out.format("Save time %d\n", (System.currentTimeMillis() - time));
     }
 
 
