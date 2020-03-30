@@ -17,7 +17,7 @@ Setting for different databases you can find in folder src/main/resources/DBconf
 1. After when you choose database next step is to **move Annotations @AspectServiceAnnotation and @EventListener(ApplicationReadyEvent.class) for specific method in Start.java.** 
 Use following table
 
-Your Database | Method to Run
+Your Database | init Method
 --------- | ---------------
 H2 | initForSql() // default
 MongoDB | initForNoSql()
