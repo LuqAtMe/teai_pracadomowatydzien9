@@ -11,5 +11,18 @@ In this application I used :
 * MongoDB Database
 * RemoteMySQL Database
 
+How to change database and run program? 
+1. **Choose Database. Change application.properties file.** 
+Setting for different databases you can find in folder src/main/resources/DBconfig. In This folder you can find settings for H2, MongoDB and RemoteMySQL Database. Just simple copy+paste in application.properties file.
+1. After when you choose database next step is to **move Annotations @AspectServiceAnnotation and @EventListener(ApplicationReadyEvent.class) for specific method in Start.java.** 
+Use following table
+
+Your Database | Method to Run
+--------- | ---------------
+H2 | initForSql() // default
+MongoDB | initForNoSql()
+RemoteMySQL | initForRemoteMySql()
+
+
 Things to do:
 - [ ] Connect to all databases in single program run and load 1000 records and display results
